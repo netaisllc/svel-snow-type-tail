@@ -4,6 +4,7 @@ const tailwindcss = require("tailwindcss");
 
 const preprocess = autoPreprocess({
   defaults: {
+    markupTagName: "markup",
     script: "typescript",
   },
   postcss: {

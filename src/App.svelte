@@ -17,7 +17,6 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
-
   .count {
     color: gold;
     text-shadow: 1px 1px 1px black;
@@ -26,9 +25,11 @@
     pointer-events: none;
     animation: App-logo-spin infinite 1.6s ease-in-out alternate;
   }
-  span {
-    color: #ff3e00;
+  a {
     font-weight: bold;
+  }
+  a.sv {
+    color: #ff3e00;
   }
   @keyframes App-logo-spin {
     from {
@@ -40,42 +41,32 @@
   }
 </style>
 
-<!--
-<div class="App bg-gray-400">
-  <header class="App-header">
-    <img src="/logo.svg" class="App-logo" alt="logo" />
-    <p>Edit <code>src/App.svelte</code> and save to reload.</p>
-    <p>Page has been open for <code>{count}</code> seconds.</p>
-    <p>
-      <a class="App-link" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
-        Learn Svelte & Tailwind to Win!
-      </a>
-    </p>
-  </header>
-</div>
--->
+<markup>
+  <main class="bg-gray-500 font-sans h-screen w-screen grid content-center justify-center">
+    <img src="/logo.svg" class="logo h-80 mb-12 justify-self-center" alt="logo" />
 
-<main class="bg-gray-500 font-sans h-screen w-screen grid content-center justify-center">
-  <img src="/logo.svg" class="logo h-80 mb-12 justify-self-center" alt="logo" />
-  <div class="justify-self-center mb-8 text-4xl text-white">
-    Edit
-    <code class="text-gray-300">src/App.svelte</code>
-    and save to reload.
-  </div>
-  <div class="justify-self-center mb-8 text-4xl text-white">
-    Page has been open for
-    <code class="count">{count}</code>
-    seconds.
-  </div>
-  <a
-    class="justify-self-center text-4xl text-black p-2 bg-white rounded-md"
-    href="https://svelte.dev"
-    target="_blank"
-    rel="noopener noreferrer">
-    Learn
-    <span>Svelte</span>
-    &
-    <span>Tailwind</span>
-    then Profit!
-  </a>
-</main>
+    <div class="justify-self-center mb-8 text-4xl text-white">
+      Edit
+      <code class="text-gray-300">src/App.svelte</code>
+      and save it to reload.
+    </div>
+
+    <div class="justify-self-center mb-8 text-4xl text-white">
+      Page has been open for
+      <code class="count">{count}</code>
+      seconds.
+    </div>
+
+    <div class="justify-self-center text-4xl text-black px-4 py-2 bg-white rounded-md">
+      Learn
+      <a class="sv" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">Svelte</a>
+      &amp;
+      <a
+        class="text-blue-400"
+        href="https://tailwindcss.com"
+        target="_blank"
+        rel="noopener noreferrer">Tailwind</a>
+      for much profit!
+    </div>
+  </main>
+</markup>
